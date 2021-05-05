@@ -63,6 +63,7 @@ def listen():
 while True:
     event, values = _VARS['window'].read(timeout=200)
     if event == sg.WIN_CLOSED or event == 'Exit':
+        stop()
         pAud.terminate()
         break
     if event == 'Listen':
